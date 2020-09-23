@@ -29,7 +29,7 @@ public class Loader
         
         es.shutdown();
 
-        System.out.println((System.currentTimeMillis() - start) + " ms");
+        System.out.printf("%d ms%n", (System.currentTimeMillis() - start));
 
 
         testThreads(1);
@@ -67,7 +67,7 @@ public class Loader
             e.printStackTrace();
         } finally {
             es.shutdown();
-            System.out.println("Count threads: " + count + " - " + (System.currentTimeMillis() - start) + " ms");
+            System.out.printf("Count threads: %d - %d ms%n", count, (System.currentTimeMillis() - start));
         }
     }
 }

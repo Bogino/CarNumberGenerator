@@ -79,13 +79,15 @@ public class Generator implements Runnable {
 
     private static String padNumber(int number, int numberLength)
     {
-        String numberStr = Integer.toString(number);
-        StringBuilder builder = new StringBuilder();
-        int padSize = numberLength - numberStr.length();
-        for(int i = 0; i < padSize; i++) {
-            builder.append('0');
-        }
-        builder.append(numberStr);
-        return builder.toString();
+//        String numberStr = Integer.toString(number);
+//        StringBuilder builder = new StringBuilder();
+//        int padSize = numberLength - numberStr.length();
+//
+//        for(int i = 0; i < padSize; i++) {
+//            builder.append('0');
+//        }
+//        builder.append(numberStr);
+//        return builder.toString();
+        return String.format("%03d",number);
     }
 }
